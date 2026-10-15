@@ -1,0 +1,113 @@
+{
+  "checked_at": "2026-10-15T19:58:18.455878+00:00",
+  "financial_writes": 0,
+  "test_key_only": true,
+  "stripe": {
+    "status": "verified",
+    "livemode": false,
+    "invoicing_access": true,
+    "invoice_count_returned": 1,
+    "api_version": "2025-06-30.basil",
+    "checks": [
+      {
+        "http_status": 200,
+        "request_id": "req_IsRWJU6fS8rGie",
+        "checked_at": "2026-10-15T19:58:18.865134+00:00",
+        "endpoint": "/v1/balance"
+      },
+      {
+        "http_status": 200,
+        "request_id": "req_OS8717bSVxhy69",
+        "checked_at": "2026-10-15T19:58:19.278434+00:00",
+        "endpoint": "/v1/invoices"
+      }
+    ],
+    "scope": "50f1b24d943e045f"
+  },
+  "cognee_authentication": {
+    "http_status": 200,
+    "request_id": null,
+    "checked_at": "2026-10-15T19:58:20.985865+00:00",
+    "endpoint": "/api/v1/datasets/"
+  },
+  "acme": [
+    {
+      "id": "in_1UQu83D8sEfWKTMaDWfdrmit",
+      "status": "void",
+      "total": 100000,
+      "amount_paid": 0,
+      "amount_remaining": 100000,
+      "livemode": false
+    },
+    {
+      "id": "in_1UQuBJD8sEfWKTMaU3vmcRla",
+      "status": "open",
+      "total": 30000,
+      "amount_paid": 0,
+      "amount_remaining": 30000,
+      "livemode": false
+    },
+    {
+      "id": "in_1UQuBRD8sEfWKTMaJx1CzewP",
+      "status": "open",
+      "total": 50000,
+      "amount_paid": 0,
+      "amount_remaining": 50000,
+      "livemode": false
+    }
+  ],
+  "actual_invoice_ids_retrieved": true,
+  "retrieval_receipt": {
+    "http_status": 200,
+    "request_id": null,
+    "checked_at": "2026-10-15T19:58:24.263450+00:00",
+    "endpoint": "/api/v1/search"
+  },
+  "scenarios": [
+    {
+      "scenario": "C",
+      "state": "REQUIRES_REVIEW",
+      "outcome": null,
+      "routing": "Dispute2Cash",
+      "evidence_references": [
+        "CONTRACT-C-001",
+        "DELIVERY-C-001",
+        "HISTORY-C-001",
+        "POLICY-C-001",
+        "PREFERENCES-C-001"
+      ],
+      "error": "PromisePay could not produce a valid structured result: PromisePay miscalculated minimum upfront"
+    },
+    {
+      "scenario": "B",
+      "state": "COMPLETED",
+      "outcome": "REJECTED",
+      "routing": "PromisePay",
+      "evidence_references": [
+        "CONTRACT-B-001",
+        "POLICY-B-001",
+        "HISTORY-B-001",
+        "PREFERENCES-B-001"
+      ],
+      "error": null
+    },
+    {
+      "scenario": "A",
+      "state": "COMPLETED",
+      "outcome": "AGREED",
+      "routing": "PromisePay",
+      "evidence_references": [
+        "CONTRACT-A-001",
+        "HISTORY-A-001",
+        "POLICY-A-001",
+        "PREFERENCES-A-001"
+      ],
+      "error": null
+    }
+  ],
+  "previously_verified_idempotency": true,
+  "previously_verified_customer_isolation": true,
+  "audit_hash_chain_valid": true,
+  "policy_minimum_on_800_pence": 24000,
+  "status": "verified_core_submission_ready_with_disclosed_agent_limitations"
+}

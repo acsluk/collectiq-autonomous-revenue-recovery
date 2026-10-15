@@ -1,0 +1,12 @@
+{
+  "name": "collectiq",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CollectIQ autonomous accounts receivable hackathon demo. Python 3.12+ backend, buildless dashboard.",
+  "scripts": {
+    "start": "python -m backend.server",
+    "test": "python -m unittest discover -s backend/tests -v",
+    "verify": "python -m backend.cli verify",
+    "demo": "python -m backend.cli demo"
+  }
+}

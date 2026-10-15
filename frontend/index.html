@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CollectIQ · The intelligent way to get paid</title>
+  <meta name="description" content="Autonomous accounts receivable. Evidence-led resolution, thoughtful negotiation, and verified Stripe test-mode settlement.">
+  <link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><img src="/favicon.svg" alt="" width="33" height="33">Collect<span>IQ</span><span class="brand-dot"></span></a>
+    <div class="workspace"><span class="workspace-avatar">N</span><div><strong>Northstar workspace</strong><small>Hackathon edition</small></div><span class="chevron">⌄</span></div>
+    <div class="nav-label">WORKSPACE</div>
+    <nav aria-label="Main navigation">
+      <a href="#overview" data-nav="overview"><span data-icon="grid"></span>Overview</a>
+      <a href="#collections" data-nav="collections"><span data-icon="inbox"></span>Collections<span class="nav-count" id="case-count">0</span></a>
+      <a href="#agents" data-nav="agents"><span data-icon="sparkles"></span>Agent workspace</a>
+      <a href="#memory" data-nav="memory"><span data-icon="network"></span>Memory & insights</a>
+      <a href="#policy" data-nav="policy"><span data-icon="shield"></span>Financial policy</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="system-card"><div class="tiny-label">EXECUTION ENVIRONMENT</div><div class="test-label"><span class="status-dot amber"></span>Stripe test mode<span class="test-badge">TEST</span></div><p>Real APIs. Test payments.<br>Every decision accounted for.</p></div>
+      <a class="settings-link" href="#integrations"><span data-icon="settings"></span>Integrations<span id="integration-dot" class="status-dot amber"></span></a>
+      <div class="profile"><span class="profile-avatar">CQ</span><div><strong>CollectIQ team</strong><small>Autonomous receivables</small></div><span class="profile-menu">•••</span></div>
+    </div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar"><div class="breadcrumb">Workspace<span>/</span><strong id="page-title">Overview</strong></div><div class="topbar-right"><span class="top-date" id="today"></span><span class="environment"><span class="status-dot amber"></span>Sandbox</span><button class="icon-button" id="refresh-button" title="Refresh verified data" aria-label="Refresh data"><span data-icon="refresh"></span></button></div></header>
+    <main id="main" tabindex="-1"></main>
+    <footer><span>Built for better business relationships.</span><span>Powered by <strong>cognee</strong><span class="footer-separator">+</span><strong>stripe</strong></span></footer>
+  </div>
+  <div id="busy-bar" class="busy-bar hidden" role="status" aria-live="polite"><span class="spinner"></span><span id="busy-text">Working…</span><span class="busy-hint">Progress is recorded in the decision trail</span></div>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <dialog id="details-dialog"><div class="dialog-header"><div><span class="eyebrow">TRANSPARENT BY DESIGN</span><h2 id="dialog-title">Decision detail</h2></div><button class="icon-button" id="close-dialog" aria-label="Close details">✕</button></div><div id="dialog-content"></div></dialog>
+</body>
+</html>
